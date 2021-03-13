@@ -5,6 +5,7 @@
       <tbody>
         <tr v-for="result in results.character1" :key="result.id">
           <td>{{result.name}}</td>
+          <td>{{result.stories.items[0].name}}</td>
         </tr>
       </tbody>
     </form>
@@ -12,6 +13,7 @@
       <tbody>
         <tr v-for="result in results.character2" :key="result.id">
           <td>{{result.name}}</td>
+          <td>{{result.stories.items[0].name}}</td>
         </tr>
       </tbody>
     </form>
@@ -30,6 +32,16 @@ export default {
                 thumbnail: {
                   path: '',
                   extension: ''
+                },
+                stories: {
+                  items: [
+                    {
+                      name: ''
+                    },
+                    {
+                      name: ''
+                    }
+                  ]
                 }
                 
               },
@@ -43,12 +55,12 @@ export default {
             
         },
         mounted() {
-        this.showCharacterBlackPanther();
+        this.showCharacterIronMan();
         this.showCharacterThor();
         },
         methods: {
-            showCharacterBlackPanther() {
-                CharacterServices.getCharacterBlackPanther().then(response => {
+            showCharacterIronMan() {
+                CharacterServices.getCharacterIronMan().then(response => {
                     this.results.character1 = response.data.data.results
                 })
             },
