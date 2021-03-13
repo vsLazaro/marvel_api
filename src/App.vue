@@ -4,7 +4,16 @@
 </template>
 
 <script>
+import CharacterServices from './services/characterservices'
 
+export default {
+    mounted() {
+      CharacterServices.getCharacterBlackPanther().then((response) => {
+        console.log(response);
+      })
+    },
+    
+}
 </script>
 
 <style>
