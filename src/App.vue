@@ -11,7 +11,7 @@
           <section id="iron-man-section" class="item" v-for="result in results.character1" :key="result.id">
               <div id="iron-man-polaroid" class="character-img">
                   <div class="centralize-img">
-                      <img :src="result.thumbnail.path + '/standard_fantastic.' + result.thumbnail.extension" alt="">
+                      <img :src="result.thumbnail.path + '/standard_fantastic.' + result.thumbnail.extension" alt="Iron Man Photo">
                   </div>
                   <h1>{{result.name}}</h1>
                   <p id="iron-man-storie-one" class="button-before-click">- First one: {{result.stories.items[0].name}}</p>
@@ -22,7 +22,7 @@
           <section id="thor-section" class="item" v-for="result in results.character2" :key="result.id">
               <div id="thor-polaroid" class="character-img">
                   <div class="centralize-img">
-                      <img :src="result.thumbnail.path + '/standard_fantastic.' + result.thumbnail.extension" alt="">
+                      <img :src="result.thumbnail.path + '/standard_fantastic.' + result.thumbnail.extension" alt="Thor Photo">
                   </div>  
                   <h1>{{result.name}}</h1>
                   <p id="thor-storie-one" class="button-before-click">- First one: {{result.stories.items[0].name}}</p>
@@ -134,11 +134,16 @@ export default {
 
 <style>
 #app {
+  min-height:100%;
+  position:relative;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   margin: auto;
+}
+html, body {
+  height:100%;
 }
 
 .logo {
@@ -162,7 +167,7 @@ export default {
   align-items: stretch;
 }
 .container {
-  margin-top:20px;
+  margin-top:100px;
   max-width: 2500px; 
   display: flex; 
 }
@@ -213,16 +218,32 @@ h1 {
   margin: 30px auto auto auto;
 }
 
+footer {
+  position:absolute;
+  bottom:0;
+  width:100%;
+
+}
+
 
 @media (max-width: 1920px) {
   .character-button {
     margin-left: 280px;
   }
+  .container {
+    margin-top: 200px;
+  }
 }
 
 @media (max-width: 1280px) {
+  .container {
+    margin-top:115px;
+  }
   .character-button {
     margin-left: 170px;
+  }
+  .return-button {
+    margin-bottom: 30px;
   }
 }
 
@@ -248,7 +269,7 @@ h1 {
   .character-button {
     margin-left: 110px;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
 }
 
