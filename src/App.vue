@@ -17,7 +17,7 @@
                   <p id="iron-man-storie-one" class="button-before-click">- First one: {{result.stories.items[0].name}}</p>
                   <p id="iron-man-storie-two" class="button-before-click">- Second onde {{result.stories.items[1].name}}</p>   
               </div>
-              <a id="iron-man-button" class="waves-effect waves-light btn-small red darken-3 character-button" v-on:click="showIronManStories()">Two Participations in stories</a>              
+              <a id="iron-man-button" class="waves-effect waves-light btn-small red darken-3 character-button" v-on:click="showIronManStories()">See More</a>              
           </section>
           <section id="thor-section" class="item" v-for="result in results.character2" :key="result.id">
               <div id="thor-polaroid" class="character-img">
@@ -28,7 +28,7 @@
                   <p id="thor-storie-one" class="button-before-click">- First one: {{result.stories.items[0].name}}</p>
                   <p id="thor-storie-two" class="button-before-click">- Second one: {{result.stories.items[1].name}}</p>
               </div>
-              <a id="thor-button" class="waves-effect waves-light btn-small red darken-3 character-button" v-on:click="showThorStories()">Two Participations in stories</a>              
+              <a id="thor-button" class="waves-effect waves-light btn-small red darken-3 character-button" v-on:click="showThorStories()">See More</a>              
           </section>          
       </div>
       <section class="align-return-button"> 
@@ -162,16 +162,13 @@ export default {
   align-items: stretch;
 }
 .container {
- 
   margin-top:20px;
-  max-width: 2500px;
- 
+  max-width: 2500px; 
   display: flex; 
 }
 .item {
   flex: 1;
-	margin: 5px;
-  
+	margin: 5px;  
 }
 
 .character-img {
@@ -179,17 +176,14 @@ export default {
   height: 400px;
   width: 400px;
   margin: auto;
-  padding-top: 20px;
-  
+  padding-top: 20px;  
 }
 .centralize-img {
   background-color: #1d1a17;
   height: 300px;
   width: 350px;
   margin-left: 25px;
-  border: 2px solid black;
-  
-  
+  border: 2px solid black;  
 }
 .button-before-click {
     display: none;
@@ -219,4 +213,42 @@ h1 {
   margin: 30px auto auto auto;
 }
 
+
+@media (max-width: 1920px) {
+  .character-button {
+    margin-left: 280px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .character-button {
+    margin-left: 170px;
+  }
+}
+
+@media (max-width: 1000px) { 
+  .container {
+    justify-content: space-around;
+    flex-direction: column;
+  }
+}
+@media (max-width: 900px) {
+  .item {
+    margin:1px;
+  }
+  .character-img {
+    width: 320px;  
+  }
+  .centralize-img {
+    width: 270px;
+  }
+  .centralize-img img {
+    margin-left: 10px;
+  }
+  .character-button {
+    margin-left: 110px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
 </style>
