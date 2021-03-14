@@ -5,7 +5,7 @@
 ## Step 1: Install node
 
 ### On windows with npm:
-[Nodejs.org] (https://nodejs.org/en/download/current/). 
+[Installer nodejs] (https://nodejs.org/en/download/current/)
 
 ### On Linux (Ubuntu 20.04):
 ```
