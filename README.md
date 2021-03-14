@@ -1,24 +1,34 @@
-# marvel_api
+# Marvel API
+###np WebApp to show 2 characters and your stories using Marvel's API
 
-## Project setup
-```
-yarn install
-```
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## Step 1: Install node
 
-### Compiles and minifies for production
+# On windows with npm:
+[Nodejs.org] (https://nodejs.org/en/download/current/). 
+
+# On Linux (Ubuntu 20.04):
 ```
-yarn build
+sudo apt install nodejs
 ```
 
-### Lints and fixes files
+### Step 1.1: Install npm on Ubuntu: 
 ```
-yarn lint
+sudo apt install npm
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Step 2: Getting up the App
+
+# Install the dependencies with:
+
+```
+npm install
+```
+
+# Start the app:
+```
+npm run serve
+```
+
+
+# Thank u
