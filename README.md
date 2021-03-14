@@ -1,13 +1,13 @@
 # Marvel API
-###np WebApp to show 2 characters and your stories using Marvel's API
+### WebApp to show 2 characters and your stories using Marvel's API
 
 
 ## Step 1: Install node
 
-# On windows with npm:
+### On windows with npm:
 [Nodejs.org] (https://nodejs.org/en/download/current/). 
 
-# On Linux (Ubuntu 20.04):
+### On Linux (Ubuntu 20.04):
 ```
 sudo apt install nodejs
 ```
@@ -19,16 +19,13 @@ sudo apt install npm
 
 ## Step 2: Getting up the App
 
-# Install the dependencies with:
+### Install the dependencies with:
 
 ```
 npm install
 ```
 
-# Start the app:
+#### Start the app:
 ```
 npm run serve
 ```
-
-
-# Thank u
